@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="main-section dark:bg-gray-900">
@@ -14,9 +16,9 @@ const Home = () => {
             UI developer with more than two years' experience creating and executing user interface solutions that are both aesthetically pleasing and practical, utilizing front end technologies that optimize the user experience.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-purple-500 border-0 py-1 px-3 xl:py-2 xl:px-6 focus:outline-none hover:bg-purple-600 rounded text-sm lg:text-lg">
+              <Link to="/profile" className="inline-flex text-white bg-purple-500 border-0 py-1 px-3 xl:py-2 xl:px-6 focus:outline-none hover:bg-purple-600 rounded text-sm lg:text-lg">
                 View profile
-              </button>
+              </Link>
               <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-1 px-3 xl:py-2 xl:px-6 focus:outline-none hover:bg-gray-200 rounded text-sm lg:text-lg">
                 Download resume
               </button>
@@ -247,7 +249,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <button className="inline-flex text-white mx-auto md:mt-5 items-center bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0">
+            <Link to="/blogs" className="inline-flex text-white mx-auto md:mt-5 items-center bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0">
               See all blogs
               <svg
                 fill="none"
@@ -260,7 +262,7 @@ const Home = () => {
               >
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
