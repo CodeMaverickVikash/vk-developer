@@ -1,10 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   // check preSelected color theme
@@ -17,7 +22,7 @@ function App() {
 
   const toggleColorMode = () => {
     setDarkMode((prevState) => !isDarkModeEnabled);
-    if(isDarkModeEnabled) {
+    if (isDarkModeEnabled) {
       localStorage.setItem("color-theme", "light");
       return;
     }
@@ -26,13 +31,17 @@ function App() {
 
   return (
     <div className={`home-wrapper ${isDarkModeEnabled ? "dark" : ""}`}>
-      {/* Navbar section */}
-      <Navbar onToggle={toggleColorMode} isDarkModeEnabled={isDarkModeEnabled} />
-
-      <Home/>
-
-      {/* Footer */}
-      <Footer />
+      <Router>
+        <Navbar onToggle={toggleColorMode} isDarkModeEnabled={isDarkModeEnabled} />
+        <Routes>
+          <Route exact path="/" element={<Home  />}></Route>
+          <Route exact path="/profile" element={<Profile />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
+          <Route exact path="/blogs" element={<Blogs />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

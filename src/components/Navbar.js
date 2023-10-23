@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
   const {onToggle, isDarkModeEnabled} = props;
@@ -21,18 +22,18 @@ const Navbar = (props) => {
           <span className="ml-3 text-xl dark:text-gray-200">VK-developer</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900 dark:hover:text-gray-400 hover:cursor-pointer">
+          <Link to="/" className="mr-5 hover:text-gray-900 dark:hover:text-gray-400">
             Home
-          </a>
-          <a className="mr-5 hover:text-gray-900 dark:hover:text-gray-400 hover:cursor-pointer">
+          </Link>
+          <Link to="/profile" className="mr-5 hover:text-gray-900 dark:hover:text-gray-400">
             Profile
-          </a>
-          <a className="mr-5 hover:text-gray-900 dark:hover:text-gray-400 hover:cursor-pointer">
+          </Link>
+          <Link to="/contact" className="mr-5 hover:text-gray-900 dark:hover:text-gray-400">
             Contact
-          </a>
-          <a className="mr-5 hover:text-gray-900 dark:hover:text-gray-400 hover:cursor-pointer">
+          </Link>
+          <Link to="/blogs" className="mr-5 hover:text-gray-900 dark:hover:text-gray-400">
             blogs
-          </a>
+          </Link>
         </nav>
         <button
           onClick={onToggle}
@@ -60,7 +61,7 @@ const Navbar = (props) => {
             ></path>
           </svg>
         </button>
-        <button className="inline-flex text-white items-center bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0">
+        <Link to="/login" className="inline-flex text-white items-center bg-purple-500 border-0 py-1 px-3 focus:outline-none hover:bg-purple-600 rounded text-base mt-4 md:mt-0">
           Sign in
           <svg
             fill="none"
@@ -73,7 +74,7 @@ const Navbar = (props) => {
           >
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
-        </button>
+        </Link>
       </div>
     </header>
   );

@@ -11,10 +11,7 @@ const Home = () => {
               I'm vikash.
             </h1>
             <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
+            UI developer with more than two years' experience creating and executing user interface solutions that are both aesthetically pleasing and practical, utilizing front end technologies that optimize the user experience.
             </p>
             <div className="flex justify-center">
               <button className="inline-flex text-white bg-purple-500 border-0 py-1 px-3 xl:py-2 xl:px-6 focus:outline-none hover:bg-purple-600 rounded text-sm lg:text-lg">
